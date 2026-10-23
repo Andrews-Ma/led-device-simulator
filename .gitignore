@@ -1,0 +1,13 @@
+build/
+.DS_Store
+src/pwm
+*.dSYM/
+__pycache__/
+docs/evidence/
+docs/PRACTICE_LOG.md
+docs/PORTFOLIO_AND_RESUME.md
+ENVIRONMENT.md
+LED练习.code-workspace
+.vscode/
+docs/RESUME_PROJECT.md
+docs/PUBLISH_PATH.txt

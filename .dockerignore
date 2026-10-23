@@ -1,0 +1,9 @@
+**
+!Dockerfile
+!Makefile
+!src/
+!src/*.c
+!src/*.h
+!tests/
+!tests/*.c
+!tests/*.py

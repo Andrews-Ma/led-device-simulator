@@ -1,0 +1,19 @@
+name: Build and test
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install C build tools
+        run: sudo apt-get update && sudo apt-get install -y clang make
+      - name: Build and test
+        run: make -s test test-cli test-device test-integration csv demo run
